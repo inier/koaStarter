@@ -1,0 +1,25 @@
+.loading {
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/icon.png);
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    -webkit-animation: loading 2s steps(1) infinite;
+    animation: loading 2s steps(1) infinite;
+}
+
+$itemWidth: 76px;
+@-webkit-keyframes loading {
+    @for $i from 0 through 100 {
+        #{$i}% {
+            background-position: -($i * $itemWidth) 0;
+        }
+    }
+}
+@keyframes loading {
+    @for $i from 0 through 100 {
+        #{$i}% {
+            background-position: -($i * $itemWidth) 0;
+        }
+    }
+}
